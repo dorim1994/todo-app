@@ -43,6 +43,43 @@ header p {
   color: var(--muted);
 }
 
+.project-row {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.project-row select {
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.secondary-btn {
+  background: #e8dfd2;
+}
+
+.project-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#project-input {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.project-form button {
+  background: #3f6f60;
+  color: #fff;
+}
+
 .date-row {
   margin-bottom: 12px;
   display: flex;
@@ -152,6 +189,16 @@ button {
   color: var(--danger);
 }
 
+.edit-btn {
+  background: #edf4f1;
+  color: #2f6f5a;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 6px;
+}
+
 .count {
   margin: 8px 0 0;
   color: var(--muted);
@@ -255,6 +302,19 @@ button {
   .date-row {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .project-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-form {
+    grid-template-columns: 1fr;
+  }
+
+  .project-form button {
+    width: 100%;
   }
 
   .todo-form {
