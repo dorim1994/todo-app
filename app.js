@@ -105,7 +105,6 @@ function loadStore() {
 
     const parsed = JSON.parse(raw);
 
-    // Legacy format migration: array -> default project with today's items
     if (Array.isArray(parsed)) {
       const defaultProject = makeDefaultProject();
       defaultProject.todosByDate[getTodayKey()] = normalizeItems(parsed);
@@ -123,7 +122,6 @@ function loadStore() {
       };
     }
 
-    // Previous version migration: { todosByDate: {...} } -> one default project
     if (parsed.todosByDate && !parsed.projects) {
       const defaultProject = makeDefaultProject();
       defaultProject.todosByDate = normalizeTodosByDate(parsed.todosByDate);
